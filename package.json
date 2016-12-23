@@ -1,0 +1,20 @@
+{
+  "name": "strip-shebang",
+  "version": "1.0.0",
+  "private": true,
+  "description": "strip shebang from node_modules",
+  "scripts": {
+    "strip-shebang": "npm ddp && node scripts/strip-shebang.js",
+    "postinstall": "npm run strip-shebang"
+  },
+  "author": "Ishi Ruy <dev@nhz.io>",
+  "license": "MIT",
+  "strip-shebang": [
+    "offender/glob/*.js",
+    "relative/to/node_modules/*.js"
+  ],
+  "devDependencies": {
+    "map-stream": "0.0.6",
+    "vinyl-fs": "^2.4.4"
+  }
+}
